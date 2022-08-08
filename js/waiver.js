@@ -20,7 +20,10 @@ footer.addEventListener('click', hideFooter);
 /**
  * problem 3
  */
-
-
+const highway = document.getElementsByTagName('figure')[4];
+const hideHighway = () => {
+    highway.style.visibility = 'hidden';
+}
+highway.addEventListener('dblclick', hideHighway);
 
 
