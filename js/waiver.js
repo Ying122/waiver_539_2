@@ -30,12 +30,49 @@ highway.addEventListener('dblclick', hideHighway);
  * problem 4
  */
 const caption = document.getElementsByTagName('figcaption')[0];
+// variable for previous font
+let preFont;
 const changeFont = () => {
+    // storing previous font
+    preFont = caption.style.fontFamily;
     caption.style.fontFamily = 'Cursive';
 }
 const changeBack = () => {
-    caption.style.fontFamily = 'Times';
+    // retrieve previous font when mouse moves away
+    caption.style.fontFamily = preFont;
 }
 caption.addEventListener('mouseover', changeFont);
 caption.addEventListener('mouseleave', changeBack);
+
+/**
+ * problem 5
+ */
+caption.setAttribute('tabindex', '1');
+caption.addEventListener('focus', changeFont);
+caption.addEventListener('blur', changeBack);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
