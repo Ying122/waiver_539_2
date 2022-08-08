@@ -26,4 +26,16 @@ const hideHighway = () => {
 }
 highway.addEventListener('dblclick', hideHighway);
 
+/**
+ * problem 4
+ */
+const caption = document.getElementsByTagName('figcaption')[0];
+const changeFont = () => {
+    caption.style.fontFamily = 'Cursive';
+}
+const changeBack = () => {
+    caption.style.fontFamily = 'Times';
+}
+caption.addEventListener('mouseover', changeFont);
+caption.addEventListener('mouseleave', changeBack);
 
